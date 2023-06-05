@@ -1,0 +1,47 @@
+﻿
+Utilizadores:
+-id_user (primary key)
+-nome
+-sobrenome
+-password
+-telefone
+-email
+-NIF
+
+Skills:
+-id_skill (primary key)
+-skill
+-area_profissional
+
+Skill_PerfilTalento:
+-id_skill (foreign key referencing Skills)
+-id_PTalento (foreign key referencing Perfil de Talentos)
+-n_AnosExperiencia
+
+Perfil de Talentos:
+-id_PTalento (primary key)
+-nome
+-país
+-email
+-preço por hora
+-visibilidade
+-id_experiencia (foreign key referencing Experiência)
+
+Experiência:
+-id_experiencia (primary key)
+-titulo
+-nome da empresa
+-ano de inicio
+-ano de termino
+
+Skill_Proposta:
+-id_skill (foreign key referencing Skills)
+-id_proposta (foreign key referencing Proposta de Trabalho)
+-n_MinAnosExperiencia
+
+Proposta de Trabalho:
+-id_proposta (primary key)
+-nome
+-categoria
+-n_Horas
+-descricao

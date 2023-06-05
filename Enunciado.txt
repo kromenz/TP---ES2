@@ -1,0 +1,60 @@
+﻿        Tema C – Plataforma de gestão de talentos IT
+        
+Este projeto consiste na implementação de uma plataforma de gestão de currículos de
+profissionais IT, nomeadamente developers, designers, product managers e project
+managers.
+1. Um utilizador pode criar uma conta. Para aceder ao sistema, o utilizador deverá
+efetuar login.
+
+2. Um utilizador pode criar e editar skills (React, C++, TimeManagement, etc.),
+indicando um nome e selecionando a área profissional (developer, design, ...). Uma
+skillsó pode ser apagada se não estiver atualmente associada a nenhum profissional.
+As skills são partilhadas entre todos os utilizadores do sistema.
+
+3. Um utilizador pode criar um perfil de um talento indicando o nome, país, e-mail, e
+preço por hora. Os perfis podem ser públicos ou privados, isto é, visíveis ou não para
+todos os utilizadores do sistema.
+
+4. Um utilizador pode criar um cliente na plataforma ao qual pode apresentar
+determinado talento.
+
+5. Cada perfil de talento deverá ter várias skills, indicando o número de anos de
+experiência para cada skill.
+
+6. A cada perfil poderá ser adicionado detalhe de uma determinada experiência,
+indicando um título, nome da empresa, ano de começo e ano de término (opcional,
+caso o talento ainda trabalhe nessa empresa). Considere que não pode haver
+sobreposição de experiências no mesmo ano.
+
+7. Permitir pesquisar talentos por uma combinação de skills. Os resultados desta
+pesquisa deverão ser ordenados por nome de talento.
+
+8. Um utilizador pode registar propostas de trabalho para os seus clientes. A proposta
+de trabalho deverá ter um nome, categoria de talento, skills necessárias, número
+mínimo de anos de experiência por skill e indicação do número total de horas e
+descrição do trabalho. As propostas de trabalho podem ser atualizadas ou
+removidas.
+
+9. É possível listar, para uma proposta de trabalho, todos os talentos existentes no
+sistema que são elegíveis para essa proposta, ordenados por valor total.
+
+10. Permitir obter um relatório com preço médio mensal (considere um mês como 176
+horas) por categoria de talento e por país.
+
+11. Permitir obter um relatório com preço médio mensal (considere um mês como 176
+horas) por skill.
+
+Base de Dados:
+tabela de Utilizadores(id_user, nome, sobrenome, password, telefone, email, NIF)
+
+tabela de Skills(id_skill ,skill, area_profissional)
+
+tabela de Skill_PerfilTalento(id_skill, id_PTalento, n_AnosExperiencia)
+
+tabela de Perfil de Talentos(id_PTalento, nome, país, email, preço por hora, visibilidade, id_experiencia)
+
+tabela de Experiência (id_experiencia, titulo, nome da empresa, ano de inicio, ano de termino)
+
+tabela de Skill_Proposta(id_skill, id_proposta, n_MinAnosExperiencia)
+
+tabela de Proposta de Trabalho(id_proposta, nome, categoria, n_Horas, descricao)
