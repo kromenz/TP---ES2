@@ -7,11 +7,13 @@ Utilizadores:
 -telefone
 -email
 -NIF
+-tipo_user (Cliente,User,UserManager,Admin)
 
 Skills:
 -id_skill (primary key)
 -skill
 -area_profissional
+-id_userCreator (foreign key referencing Utiizadores)
 
 Skill_PerfilTalento:
 -id_skill (foreign key referencing Skills)
@@ -26,6 +28,7 @@ Perfil de Talentos:
 -preço por hora
 -visibilidade
 -id_experiencia (foreign key referencing Experiência)
+-id_userCreator (foreign key referencing Utiizadores)
 
 Experiência:
 -id_experiencia (primary key)
@@ -45,3 +48,4 @@ Proposta de Trabalho:
 -categoria
 -n_Horas
 -descricao
+-id_userCreator (foreign key referencing Utiizadores)
